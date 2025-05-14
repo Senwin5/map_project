@@ -14,26 +14,26 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.blue[500],
         body: Column(
           children: [
-            Text("Hello, Welcome back"),
-            Text("Login to continue"),
+            Text("Welcome to Deus Magnus Ltd"),
+            Text("Login here to Continue"),
             TextField(decoration: InputDecoration(hintText: "Username")),
             TextField(decoration: InputDecoration(hintText: "Password")),
             TextButton(
               onPressed: () {
-                print('Forgot is Clicked');
+                print("Forgot is clicked");
               },
-              child: Text("Forgot Password"),
+              child: Text("Forgot is clicked"),
             ),
             ElevatedButton(
               onPressed: () {
-                print('Login is Clicked');
+                print("Login is clicked");
               },
-              child: Text("Login "),
+              child: Text("Login to Deus Magnus"),
             ),
-            Text("Or sign in with"),
+            Text("Or sign up with Google"),
             ElevatedButton(
               onPressed: () {
-                print("Google is Clicked");
+                print("Google is clicked");
               },
               child: Text("Login with Google"),
             ),
