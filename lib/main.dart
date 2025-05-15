@@ -35,7 +35,17 @@ class MyApp extends StatelessWidget {
               onPressed: () {
                 print("Google is clicked");
               },
-              child: Text("Login with Google"),
+
+              child: Row(
+                children: [
+                  Image.asset(
+                    'assets/images/google.png',
+                    width: 22,
+                    height: 22,
+                  ),
+                  Text("Login with Google Account"),
+                ],
+              ),
             ),
           ],
         ),
