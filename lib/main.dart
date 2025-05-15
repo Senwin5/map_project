@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
               child: Text("Login with Google"),
             ),
           ],
-        )
+        ),
       ),
     );
   }
