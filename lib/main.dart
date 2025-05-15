@@ -47,6 +47,29 @@ class MyApp extends StatelessWidget {
                 ],
               ),
             ),
+
+            ElevatedButton(
+              onPressed: () {
+                print("facebook is been clicked on");
+              },
+              child: Row(
+                children: [
+                  Image.asset(
+                    'assets/images/facebook.png',
+                    width: 22,
+                    height: 22,
+                  ),
+                  Text("Login with Facebook Account"),
+                ],
+              ),
+            ),
+
+            Row(
+              children: [
+                Text("Don't have an account?"),
+                TextButton(onPressed: () {}, child: Text("Sign up here")),
+              ],
+            ),
           ],
         ),
       ),
