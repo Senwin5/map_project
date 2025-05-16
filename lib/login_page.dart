@@ -18,12 +18,8 @@ class LoginPage extends StatelessWidget {
             ),
           ),
           SizedBox(height: 16),
-          Text("Login here to Continue",
-          style: TextStyle(
-            color: Colors.white)),
-            SizedBox(
-              height: 16
-              ),
+          Text("Login here to Continue", style: TextStyle(color: Colors.white)),
+          SizedBox(height: 16),
           TextField(
             decoration: InputDecoration(
               hintText: "Username",
@@ -34,9 +30,7 @@ class LoginPage extends StatelessWidget {
               fillColor: Colors.white.withOpacity(0.5),
             ),
           ),
-          SizedBox(
-            height: 16
-            ),
+          SizedBox(height: 16),
           TextField(
             decoration: InputDecoration(
               hintText: "Password",
@@ -48,28 +42,39 @@ class LoginPage extends StatelessWidget {
             ),
           ),
 
-          TextButton(
-            onPressed: () {
-              print("Forgot is clicked");
-            },
-            style:TextButton.styleFrom(
-              foregroundColor: Colors.white,
+          Align(
+            alignment: Alignment.centerRight,
+            child: TextButton(
+              onPressed: () {
+                print("Forgot is clicked");
+              },
+              style: TextButton.styleFrom(foregroundColor: Colors.white),
+              child: Text("Forgot is clicked"),
             ),
-            child: Text("Forgot is clicked"),
           ),
-          
-          ElevatedButton(
-            onPressed: () {
-              print("Login is clicked");
-            },
-            child: Text("Login to Deus Magnus"),
+
+          SizedBox(
+            width: 250,
+            child: ElevatedButton(
+              onPressed: () {
+                print("Login is clicked");
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.amber,
+                foregroundColor: Colors.black,
+              ),
+              child: Text("Login to Deus Magnus"),
+            ),
           ),
-          Text("Or sign up with Google"),
+          SizedBox(height: 30),
+          Text("Or sign up with Google", style: TextStyle(color: Colors.white)),
+          SizedBox(height: 16),
+
           ElevatedButton(
             onPressed: () {
               print("Google is clicked");
             },
-
+            style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
             child: Row(
               children: [
                 Image.asset('assets/images/google.png', width: 22, height: 22),
@@ -82,6 +87,7 @@ class LoginPage extends StatelessWidget {
             onPressed: () {
               print("facebook is been clicked on");
             },
+            style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
             child: Row(
               children: [
                 Image.asset(
