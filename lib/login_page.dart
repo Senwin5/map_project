@@ -19,40 +19,45 @@ class LoginPage extends StatelessWidget {
           ),
           SizedBox(height: 16),
           Text("Login here to Continue",
-          style:
-          TextStyle(
-            color: Colors.white
-            ),
-          ),
+          style: TextStyle(
+            color: Colors.white)),
+            SizedBox(
+              height: 16
+              ),
           TextField(
             decoration: InputDecoration(
               hintText: "Username",
               border: OutlineInputBorder(
-                borderRadius: BorderRadius.all(Radius.circular(12),
-                )
+                borderRadius: BorderRadius.all(Radius.circular(12)),
               ),
               filled: true,
               fillColor: Colors.white.withOpacity(0.5),
-              ),
             ),
-            TextField(
+          ),
+          SizedBox(
+            height: 16
+            ),
+          TextField(
             decoration: InputDecoration(
               hintText: "Password",
               border: OutlineInputBorder(
-                borderRadius: BorderRadius.all(Radius.circular(12),
-                )
+                borderRadius: BorderRadius.all(Radius.circular(12)),
               ),
               filled: true,
               fillColor: Colors.white.withOpacity(0.5),
-              ),
             ),
-       
+          ),
+
           TextButton(
             onPressed: () {
               print("Forgot is clicked");
             },
+            style:TextButton.styleFrom(
+              foregroundColor: Colors.white,
+            ),
             child: Text("Forgot is clicked"),
           ),
+          
           ElevatedButton(
             onPressed: () {
               print("Login is clicked");
