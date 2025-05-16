@@ -28,14 +28,25 @@ class LoginPage extends StatelessWidget {
             decoration: InputDecoration(
               hintText: "Username",
               border: OutlineInputBorder(
-                borderRadius: BorderRadius.all(Radius.circular(12),)
+                borderRadius: BorderRadius.all(Radius.circular(12),
+                )
               ),
               filled: true,
               fillColor: Colors.white.withOpacity(0.5),
               ),
             ),
-          TextField(
-            decoration: InputDecoration(hintText: "Password")),
+            TextField(
+            decoration: InputDecoration(
+              hintText: "Password",
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.all(Radius.circular(12),
+                )
+              ),
+              filled: true,
+              fillColor: Colors.white.withOpacity(0.5),
+              ),
+            ),
+       
           TextButton(
             onPressed: () {
               print("Forgot is clicked");
