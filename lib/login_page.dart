@@ -114,11 +114,23 @@ class LoginPage extends StatelessWidget {
               ],
             ),
           ),
-
           Row(
             children: [
-              Text("Don't have an account?"),
-              TextButton(onPressed: () {}, child: Text("Sign up here")),
+              Text(
+                " Don't have an account ?",
+                style: TextStyle(color: Colors.white),
+              ),
+              TextButton(
+                onPressed: () {},
+                style: TextButton.styleFrom(
+                  foregroundColor: Colors.amber,
+                  //backgroundColor: Colors.amber
+                ),
+                child: Text(
+                  " Sign up here",
+                  style: TextStyle(decoration: TextDecoration.underline),
+                ),
+              ),
             ],
           ),
         ],
