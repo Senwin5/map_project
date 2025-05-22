@@ -81,7 +81,7 @@ class LoginPage extends StatelessWidget {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(80)),
               ),
-            ),
+            ), 
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
