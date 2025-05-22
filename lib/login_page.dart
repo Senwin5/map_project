@@ -9,6 +9,7 @@ class LoginPage extends StatelessWidget {
       backgroundColor: Colors.blue[500],
       body: Column(
         children: [
+          SizedBox(height: 46),
           Text(
             "Welcome to Deus Magnus Ltd",
             style: TextStyle(
@@ -78,7 +79,7 @@ class LoginPage extends StatelessWidget {
             child: Row(
               children: [
                 Image.asset('assets/images/google.png', width: 22, height: 22),
-                Text("Login with Google Account"),
+                Text(" Login with Google Account"),
               ],
             ),
           ),
@@ -95,7 +96,7 @@ class LoginPage extends StatelessWidget {
                   width: 22,
                   height: 22,
                 ),
-                Text("Login with Facebook Account"),
+                Text(" Login with Facebook Account"),
               ],
             ),
           ),
