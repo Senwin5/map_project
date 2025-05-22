@@ -75,8 +75,15 @@ class LoginPage extends StatelessWidget {
             onPressed: () {
               print("Google is clicked");
             },
-            style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.white,
+              foregroundColor: Colors.black,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(80)),
+              ),
+            ),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset('assets/images/google.png', width: 22, height: 22),
                 Text(" Login with Google Account"),
@@ -88,8 +95,15 @@ class LoginPage extends StatelessWidget {
             onPressed: () {
               print("facebook is been clicked on");
             },
-            style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.white,
+              foregroundColor: Colors.black,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(80)),
+              ),
+            ),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
                   'assets/images/facebook.png',
