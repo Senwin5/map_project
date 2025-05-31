@@ -11,7 +11,8 @@ class LoginPage extends StatelessWidget {
         padding: EdgeInsets.all(24),
         child: Column(
           children: [
-            SizedBox(height: 68),
+            //SizedBox(height: 68),
+            Spacer(),
             Text(
               "Welcome to Deus Magnus Ltd",
               style: TextStyle(
@@ -22,8 +23,13 @@ class LoginPage extends StatelessWidget {
               ),
             ),
             SizedBox(height: 16),
-            Text("Login here to Continue", style: TextStyle(color: Colors.white)),
-            SizedBox(height: 60),
+
+            Text(
+              "Login here to Continue",
+              style: TextStyle(color: Colors.white),
+            ),
+            //SizedBox(height: 60),
+            Spacer(),
             TextField(
               decoration: InputDecoration(
                 hintText: "Username",
@@ -45,7 +51,7 @@ class LoginPage extends StatelessWidget {
                 fillColor: Colors.white.withOpacity(0.5),
               ),
             ),
-        
+
             Align(
               alignment: Alignment.centerRight,
               child: TextButton(
@@ -56,9 +62,10 @@ class LoginPage extends StatelessWidget {
                 child: Text("Forgot is clicked"),
               ),
             ),
-        
+            SizedBox(height: 32),
             SizedBox(
               width: 250,
+              height: 48,
               child: ElevatedButton(
                 onPressed: () {
                   print("Login is clicked");
@@ -70,51 +77,65 @@ class LoginPage extends StatelessWidget {
                 child: Text("Login to Deus Magnus"),
               ),
             ),
-            SizedBox(height: 30),
-            Text("Or sign up with Google", style: TextStyle(color: Colors.white)),
+            //SizedBox(height: 30),
+            Spacer(),
+            Text(
+              "Or sign up with Google",
+              style: TextStyle(color: Colors.white),
+            ),
             SizedBox(height: 16),
-        
-            ElevatedButton(
-              onPressed: () {
-                print("Google is clicked");
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.white,
-                foregroundColor: Colors.black,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(80)),
+
+            SizedBox(
+              height: 48,
+              child: ElevatedButton(
+                onPressed: () {
+                  print("Google is clicked");
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.white,
+                  foregroundColor: Colors.black,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(80)),
+                  ),
                 ),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Image.asset('assets/images/google.png', width: 22, height: 22),
-                  Text(" Login with Google Account"),
-                ],
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(
+                      'assets/images/google.png',
+                      width: 22,
+                      height: 22,
+                    ),
+                    Text(" Login with Google Account"),
+                  ],
+                ),
               ),
             ),
-            SizedBox(height: 16,),
-            ElevatedButton(
-              onPressed: () {
-                print("facebook is been clicked on");
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.white,
-                foregroundColor: Colors.black,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(80)),
-                ),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Image.asset(
-                    'assets/images/facebook.png',
-                    width: 22,
-                    height: 22,
+            SizedBox(height:16),
+            SizedBox(
+              height: 48,
+              child: ElevatedButton(
+                onPressed: () {
+                  print("facebook is been clicked on");
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.white,
+                  foregroundColor: Colors.black,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(80)),
                   ),
-                  Text(" Login with Facebook Account"),
-                ],
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(
+                      'assets/images/facebook.png',
+                      width: 22,
+                      height: 22,
+                    ),
+                    Text(" Login with Facebook Account"),
+                  ],
+                ),
               ),
             ),
             Row(
@@ -137,6 +158,7 @@ class LoginPage extends StatelessWidget {
                 ),
               ],
             ),
+            Spacer(),
           ],
         ),
       ),
