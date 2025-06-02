@@ -79,7 +79,7 @@ class LoginPage extends StatelessWidget {
                       backgroundColor: Colors.amber,
                       foregroundColor: Colors.black,
                     ),
-                    child: Text("Login to Deus Magnusb"),
+                    child: Text("Login to Deus Magnus"),
                   ),
                 ),
                 //SizedBox(height: 30),
