@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:map_project/pages/home_page.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -70,7 +71,9 @@ class LoginPage extends StatelessWidget {
                   height: 48,
                   child: ElevatedButton(
                     onPressed: () {
-                      print("Login is clicked");
+                      //print("Login is clicked");
+                      // Adding Navigation to homePage
+                      Navigator.of(context).pushNamed('/home');
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.amber,
@@ -126,7 +129,7 @@ class LoginPage extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(80)),
                       ),
-                     ),
+                    ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
