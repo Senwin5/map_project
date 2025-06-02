@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:map_project/login_page.dart'; 
 import 'package:map_project/styles/app_colors.dart';
-
+ 
 void main() {
   runApp(MyApp());
 }
