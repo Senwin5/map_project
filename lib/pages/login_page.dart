@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:map_project/pages/home_page.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -59,7 +58,7 @@ class LoginPage extends StatelessWidget {
                   alignment: Alignment.centerRight,
                   child: TextButton(
                     onPressed: () {
-                      print("Forgot is clicked");
+                      //print("Forgot is clicked");
                     },
                     style: TextButton.styleFrom(foregroundColor: Colors.white),
                     child: Text("Forgot is clicked"),
@@ -94,7 +93,7 @@ class LoginPage extends StatelessWidget {
                   height: 48,
                   child: ElevatedButton(
                     onPressed: () {
-                      print("Google is clicked");
+                      //print("Google is clicked");
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.white,
@@ -121,7 +120,7 @@ class LoginPage extends StatelessWidget {
                   height: 48,
                   child: ElevatedButton(
                     onPressed: () {
-                      print("facebook is been clicked on");
+                     // print("facebook is been clicked on");
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.white,
