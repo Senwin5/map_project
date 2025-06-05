@@ -33,7 +33,7 @@ class LoginPage extends StatelessWidget {
                 ),
                 //SizedBox(height: 60),
                 Spacer(),
-                TextField
+                TextField(
                   decoration: InputDecoration(
                     hintText: "Username",
                     border: OutlineInputBorder(
