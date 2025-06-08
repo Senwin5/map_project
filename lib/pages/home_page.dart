@@ -13,10 +13,11 @@ class HomePage extends StatelessWidget {
         centerTitle: false,
         actions: [Icon(Icons.location_on_outlined)],
       ),
-      body: Column(children: mockUsersFromServer()),
+      body: ListView(children:mockUsersFromServer(),)
     );
   }
 
+// adding a method call _userItem for the list of user and profile
   Widget _userItem() {
     return Row(
       children: [
@@ -27,11 +28,13 @@ class HomePage extends StatelessWidget {
     );
   }
 
+// creating list of widget e'g mockUsersFromServer from server
   List<Widget> mockUsersFromServer() {
     List<Widget> users = [];
-    for (var i = 0; i < 20; i) {
+    for (var i = 0; i < 1000; i++)
+ {
       users.add(_userItem());
-    }
+    }   
     return users;
   }
 }
