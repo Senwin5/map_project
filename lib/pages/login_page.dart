@@ -72,7 +72,7 @@ class LoginPage extends StatelessWidget {
                     onPressed: () {
                       //print("Login is clicked");
                       // Adding Navigation to homePage
-                      Navigator.of(context).pushReplacementNamed('/main'); 
+                      Navigator.of(context).pushReplacementNamed('/test'); 
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.amber,
