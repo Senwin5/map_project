@@ -23,7 +23,7 @@ class _MainPageState extends State<MainPage> {
           ),
           BottomNavigationBarItem(icon: Icon(Icons.add), label: 'Add Post'),
         ],
-        currentIndex: currentIndex,
+        currentIndex: ,
         onTap: (index) {
           setState(() {
             currentIndex = index;
