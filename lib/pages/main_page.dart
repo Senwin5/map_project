@@ -22,7 +22,7 @@ class _MainPageState extends State<MainPage> {
           BottomNavigationBarItem(icon: SvgPicture.asset(assetName), label: 'Home'),
           BottomNavigationBarItem(
             icon: Icon(Icons.favorite),
-            label: 'Favorite'
+            label: 'Favorite',
           ),
           BottomNavigationBarItem(icon: Icon(Icons.add), label: 'Add Post'),
         ],
