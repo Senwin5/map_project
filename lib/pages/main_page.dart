@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -9,6 +10,8 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   int currentIndex = 0;
+  
+  String? get assetName => null;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,10 +19,10 @@ class _MainPageState extends State<MainPage> {
       body: Center(child: Text('Center Text')),
       bottomNavigationBar: BottomNavigationBar(
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: SvgPicture.asset(assetName), label: 'Home'),
           BottomNavigationBarItem(
             icon: Icon(Icons.favorite),
-            label: 'Favorite',
+            label: 'Favorite'
           ),
           BottomNavigationBarItem(icon: Icon(Icons.add), label: 'Add Post'),
         ],
