@@ -22,10 +22,12 @@ class _MainPageState extends State<MainPage> {
           BottomNavigationBarItem(
             icon: SvgPicture.asset('assets/svg/ic_home.svg'), label: 'Home'),
           BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
-            label: 'Favorite',
-          ),
-          BottomNavigationBarItem(icon: Icon(Icons.add), label: 'Add Post'),
+            icon: SvgPicture.asset('assets/svg/ic_favorite.svg'), label: 'Home'),
+          BottomNavigationBarItem(
+          icon: SvgPicture.asset('assets/svg/ic_message.svg'), label: 'Home'),
+          BottomNavigationBarItem(
+          icon: SvgPicture.asset('assets/svg/ic_user.svg'), label: 'Home'),
+      
         ],
         currentIndex: currentIndex,
         onTap: (index) {
