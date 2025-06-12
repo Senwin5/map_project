@@ -11,7 +11,7 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   int currentIndex = 0;
   
-  String? get assetName => null;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +19,8 @@ class _MainPageState extends State<MainPage> {
       body: Center(child: Text('Center Text')),
       bottomNavigationBar: BottomNavigationBar(
         items: [
-          BottomNavigationBarItem(icon: SvgPicture.asset(assetName), label: 'Home'),
+          BottomNavigationBarItem(
+            icon: SvgPicture.asset('assets/svg/ic_home.svg'), label: 'Home'),
           BottomNavigationBarItem(
             icon: Icon(Icons.favorite),
             label: 'Favorite',
