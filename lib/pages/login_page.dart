@@ -44,7 +44,7 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 16),
-                TextField
+                TextField(
                   decoration: InputDecoration(
                     hintText: "Password",
                     border: OutlineInputBorder(
