@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:map_project/components/post_item.dart';
+import 'package:map_project/components/toolbar.dart';
 import 'package:map_project/styles/app_colors.dart';
 
+// ignore: must_be_immutable
 class HomePage extends StatelessWidget {
   HomePage({super.key});
 
@@ -10,12 +13,9 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     mockUsersFromServer();
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: AppColors.background,
-        title: Text('SenwinFlutter'),
-        centerTitle: false,
-        actions: [Icon(Icons.location_on_outlined)],
-      ),
+      appBar:Toolbar(title: 'Senwin', actions: [
+        SvgPicture.asset('assets/svg/ic_location.svg')
+      ],),//appbar need a size 64
       body: ListView.separated(
         itemBuilder: (context, index) {
           return PostItem(user: users[index]);
