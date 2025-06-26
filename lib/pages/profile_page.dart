@@ -10,8 +10,17 @@ class ProfilePage extends StatelessWidget {
       body: Column(
         children: [
           Image.asset('assets/temp/user1.png', width: 90, height: 90),
+          SizedBox(
+            height: 24,
+            ),
           Text('Mandy Mary Monday', style: AppText.header2),
+           SizedBox(
+            height: 12,
+            ),
           Text('Madacaster lol', style: AppText.subtitle3),
+           SizedBox(
+            height: 24,
+            ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
