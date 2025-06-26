@@ -13,17 +13,24 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     mockUsersFromServer();
     return Scaffold(
-      appBar:Toolbar(title: 'Senwin', actions: [
-        SvgPicture.asset('assets/svg/ic_location.svg')
-      ],),//appbar need a size 64
+      appBar: Toolbar(
+        title: 'Senwin',
+        actions: [
+         SvgPicture.asset(
+            'assets/svg/ic_location.svg',
+            width: 27,
+            height: 29,
+            color: Colors.white,
+          ),
+        ],
+      ), //appbar need a size 64
       body: ListView.separated(
         itemBuilder: (context, index) {
           return PostItem(user: users[index]);
         },
         itemCount: users.length,
         separatorBuilder: (BuildContext context, int index) {
-          return SizedBox(height: 24,
-          );
+          return SizedBox(height: 24);
         },
       ),
     );
