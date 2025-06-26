@@ -16,9 +16,16 @@ class HomePage extends StatelessWidget {
         centerTitle: false,
         actions: [Icon(Icons.location_on_outlined)],
       ),
-      body: ListView.builder(itemBuilder: (context, index) {
-        return PostItem( user:users[index],);
-      },),
+      body: ListView.separated(
+        itemBuilder: (context, index) {
+          return PostItem(user: users[index]);
+        },
+        itemCount: users.length,
+        separatorBuilder: (BuildContext context, int index) {
+          return SizedBox(height: 24,
+          );
+        },
+      ),
     );
   }
 

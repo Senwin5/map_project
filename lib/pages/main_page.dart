@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:map_project/pages/home_page.dart';
+import 'package:map_project/pages/profile_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -27,7 +28,7 @@ class _MainPageState extends State<MainPage> {
             icon: SvgPicture.asset('assets/svg/ic_favorite.svg'),
             label: 'Favorite',
           ),
-            BottomNavigationBarItem(
+          BottomNavigationBarItem(
             icon: SvgPicture.asset('assets/svg/ic_message.svg'),
             label: 'Add Post',
           ),
@@ -58,9 +59,9 @@ class _MainPageState extends State<MainPage> {
   // ignore: non_constant_identifier_names
   final Pages = [
     HomePage(),
-    Center(child: Text('Favorite'),),
-    Center(child: Text('Add Post'),),
-    Center(child: Text('Message'),),
-    Center(child: Text('User'),),
-    ];
+    Center(child: Text('Favorite')),
+    Center(child: Text('Add Post')),
+    Center(child: Text('Message')),
+    ProfilePage(),
+  ];
 }
