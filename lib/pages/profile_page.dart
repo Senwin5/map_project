@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:map_project/components/toolbar.dart';
 import 'package:map_project/styles/app_text.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -7,20 +8,35 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: Toolbar(
+        title: 'Profile',
+        actions: [
+          PopupMenuButton<int>(
+            onSelected: (value) {
+              switch (value) {
+                case 1:
+                  print('Editation');
+                case 2:
+                  print('Log out System');
+              }
+            },
+            itemBuilder: (context) {
+              return [
+                PopupMenuItem(child: Text('Edit'), value: 1),
+                PopupMenuItem(child: Text('Log Out'), value: 2),
+              ];
+            },
+          ),
+        ],
+      ),
       body: Column(
         children: [
           Image.asset('assets/temp/user1.png', width: 90, height: 90),
-          SizedBox(
-            height: 24,
-            ),
+          SizedBox(height: 24),
           Text('Mandy Mary Monday', style: AppText.header2),
-           SizedBox(
-            height: 12,
-            ),
+          SizedBox(height: 12),
           Text('Madacaster lol', style: AppText.subtitle3),
-           SizedBox(
-            height: 24,
-            ),
+          SizedBox(height: 24),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -41,7 +57,7 @@ class ProfilePage extends StatelessWidget {
               ),
             ],
           ),
-          Divider(thickness: 1, height:24),
+          Divider(thickness: 1, height: 24),
         ],
       ),
     );

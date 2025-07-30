@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:map_project/styles/app_colors.dart';
+import 'package:map_project/styles/app_text.dart';
 
 class Toolbar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
@@ -10,7 +11,7 @@ class Toolbar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: AppColors.background,
-      title: Text(title),
+      title: Text(title, style:AppText.header1,),
       centerTitle: false,
       actions: actions,
     );

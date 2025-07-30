@@ -34,22 +34,22 @@ class LoginPage extends StatelessWidget {
                 //SizedBox(height: 60),
                 Spacer(),
                 TextField(
-                  decoration: InputDecoration(
-                    hintText: "Username",
+                  decoration:  InputDecoration(
+                    hintText: "Username",                          
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(12)),
-                    ),
-                    filled: true,
+                    ), 
+                    filled: true,      
                     fillColor: Colors.white.withOpacity(0.5),
                   ),
                 ),
                 SizedBox(height: 16),
-                TextField(
-                  decoration: InputDecoration(
-                    hintText: "Password",
+                TextField( 
+                  decoration:  InputDecoration(
+                    hintText: "Password",      
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(12)),
-                    ),
+                    ),  
                     filled: true,
                     fillColor: Colors.white.withOpacity(0.5),
                   ),

@@ -16,11 +16,8 @@ class HomePage extends StatelessWidget {
       appBar: Toolbar(
         title: 'Senwin',
         actions: [
-         SvgPicture.asset(
-            'assets/svg/ic_location.svg',
-            width: 27,
-            height: 29,
-            color: Colors.white,
+          IconButton(onPressed: (){
+          }, icon:  SvgPicture.asset('assets/svg/ic_location.svg',width: 27,height: 22,color: Colors.white,)
           ),
         ],
       ), //appbar need a size 64
