@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:map_project/components/post_item.dart';
 import 'package:map_project/components/toolbar.dart';
-import 'package:map_project/styles/app_colors.dart';
+//import 'package:map_project/styles/app_colors.dart';
 
 // ignore: must_be_immutable
 class HomePage extends StatelessWidget {
