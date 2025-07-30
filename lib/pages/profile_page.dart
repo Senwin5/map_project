@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:map_project/components/toolbar.dart';
 import 'package:map_project/styles/app_text.dart';
 
+enum ProfileMenu { edit, logout }
+
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
 
@@ -11,55 +13,83 @@ class ProfilePage extends StatelessWidget {
       appBar: Toolbar(
         title: 'Profile',
         actions: [
-          PopupMenuButton<int>(
+          PopupMenuButton<ProfileMenu>(
             onSelected: (value) {
               switch (value) {
-                case 1:
+                case ProfileMenu.edit:
                   print('Editation');
-                case 2:
+                  break;
+                case ProfileMenu.logout:
                   print('Log out System');
+                  break;
               }
             },
-            itemBuilder: (context) {
-              return [
-                PopupMenuItem(child: Text('Edit'), value: 1),
-                PopupMenuItem(child: Text('Log Out'), value: 2),
-              ];
-            },
+            icon: const Icon(Icons.more_vert_rounded),
+            itemBuilder: (context) => const [
+              PopupMenuItem(
+                value: ProfileMenu.edit,
+                child: Text('Edit'),
+              ),
+              PopupMenuItem(
+                value: ProfileMenu.logout,
+                child: Text('Log Out'),
+              ),
+            ],
           ),
         ],
       ),
       body: Column(
         children: [
-          Image.asset('assets/temp/user1.png', width: 90, height: 90),
-          SizedBox(height: 24),
-          Text('Mandy Mary Monday', style: AppText.header2),
-          SizedBox(height: 12),
-          Text('Madacaster lol', style: AppText.subtitle3),
-          SizedBox(height: 24),
+          const SizedBox(height: 24),
+
+          // 👇 Decorative background around the profile image
+          Container(
+            width: 100,
+            height: 100,
+            decoration: const BoxDecoration(
+              color: Color.fromARGB(255, 81, 68, 67), // Light blue background
+              shape: BoxShape.circle,
+            ),
+            padding: const EdgeInsets.all(4),
+            child: const CircleAvatar(
+              radius: 45,
+              backgroundImage: AssetImage('assets/temp/user1.png'),
+            ),
+          ),
+
+          const SizedBox(height: 24),
+          const Text('Mandy Mary Monday', style: AppText.header2),
+          const SizedBox(height: 12),
+          const Text('Madagascar', style: AppText.subtitle3),
+          const SizedBox(height: 24),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Column(
-                children: [
-                  Text('472', style: AppText.header2),
-                  Text('Followers'),
-                ],
-              ),
-              Column(
-                children: [Text('169', style: AppText.header2), Text('Post')],
-              ),
-              Column(
-                children: [
-                  Text('222', style: AppText.header2),
-                  Text('Following'),
-                ],
-              ),
+            children: const [
+              _ProfileStat(count: '472', label: 'Followers'),
+              _ProfileStat(count: '169', label: 'Post'),
+              _ProfileStat(count: '220', label: 'Following'),
             ],
           ),
-          Divider(thickness: 1, height: 24),
+          const Divider(thickness: 1, height: 24),
         ],
       ),
+    );
+  }
+}
+
+class _ProfileStat extends StatelessWidget {
+  final String count;
+  final String label;
+
+  const _ProfileStat({required this.count, required this.label});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Text(count, style: AppText.header2),
+        Text(label),
+      ],
     );
   }
 }
