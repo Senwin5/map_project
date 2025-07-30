@@ -55,7 +55,6 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
                 Align(
-                  
                   alignment: Alignment.centerRight,
                   child: TextButton(
                     onPressed: () {
