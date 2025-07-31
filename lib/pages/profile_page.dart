@@ -17,7 +17,7 @@ class ProfilePage extends StatelessWidget {
             onSelected: (value) {
               switch (value) {
                 case ProfileMenu.edit:
-                  print('Editation');
+                  Navigator.of(context);
                   break;
                 case ProfileMenu.logout:
                   print('Log out System');
@@ -25,16 +25,14 @@ class ProfilePage extends StatelessWidget {
               }
             },
             icon: const Icon(Icons.more_vert_rounded),
-            itemBuilder: (context) => const [
-              PopupMenuItem(
-                value: ProfileMenu.edit,
-                child: Text('Edit'),
-              ),
-              PopupMenuItem(
-                value: ProfileMenu.logout,
-                child: Text('Log Out'),
-              ),
-            ],
+            itemBuilder:
+                (context) => const [
+                  PopupMenuItem(value: ProfileMenu.edit, child: Text('Edit')),
+                  PopupMenuItem(
+                    value: ProfileMenu.logout,
+                    child: Text('Log Out'),
+                  ),
+                ],
           ),
         ],
       ),
@@ -46,10 +44,7 @@ class ProfilePage extends StatelessWidget {
           Container(
             width: 100,
             height: 100,
-            decoration: const BoxDecoration(
-              color: Color.fromARGB(255, 81, 68, 67), // Light blue background
-              shape: BoxShape.circle,
-            ),
+            decoration: const BoxDecoration(shape: BoxShape.circle),
             padding: const EdgeInsets.all(4),
             child: const CircleAvatar(
               radius: 45,
@@ -85,11 +80,6 @@ class _ProfileStat extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text(count, style: AppText.header2),
-        Text(label),
-      ],
-    );
+    return Column(children: [Text(count, style: AppText.header2), Text(label)]);
   }
 }
